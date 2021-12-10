@@ -2,11 +2,11 @@
     import Task from "./task.svelte";
     let newTask = "";
     let tasks = [
-        { id: 0, title: "Task 1", done: false },
-        { id: 1, title: "Task 2", done: false },
-        { id: 2, title: "Task 3", done: false },
-        { id: 5, title: "Task 4", done: false },
-        { id: 4, title: "Task 5", done: false },
+        { title: "Task 1", done: false },
+        { title: "Task 2", done: false },
+        { title: "Task 3", done: false },
+        { title: "Task 4", done: false },
+        { title: "Task 5", done: false },
     ];
 
     $: sortedTasks = tasks.sort((a, b) => a.done - b.done);
@@ -14,7 +14,6 @@
         tasks = [
             ...tasks,
             {
-                id: tasks.length + 1,
                 title: newTask,
                 done: false,
             },

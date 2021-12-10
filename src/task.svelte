@@ -1,5 +1,4 @@
 <script>
-    export let id;
     export let title;
     export let done;
 
